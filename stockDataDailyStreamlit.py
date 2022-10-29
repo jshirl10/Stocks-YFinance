@@ -10,7 +10,7 @@ def getTickerSymbols():
     Reads a local CSV where all NASDAQ stocks are listed.
     :return: All NASDAQ stock symbols
     '''
-    stockData = pd.read_csv(r'C:\Users\joshs\Documents\Josh_Projects\Code Templates\Finance_Data_Scraper\All Nasdaq Companies.csv')
+    stockData = pd.read_csv(r'path_to_file.csv')
     symbols = stockData['Symbol']
     return symbols
 
@@ -48,7 +48,7 @@ def insert(conn, write_df):
 
 def validateTicker(stockTicker):
     stockData = pd.read_csv(
-        r'C:\Users\joshs\Documents\Josh_Projects\Code Templates\Finance_Data_Scraper\All Nasdaq Companies.csv')
+        r'path_to_file.csv')
     symbols = stockData['Symbol']
     for ticker in symbols:
         if ticker == stockTicker:
